@@ -1,0 +1,13 @@
+{
+  "name": "timetable-schedular",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node --watch index.js"
+  },
+  "keywords": [],
+  "author": "Shubham Shah",
+  "license": "ISC",
+  "description": "This is a timetable schedular app for college/school. This app is designed to simplify the prosess of allocating the time, classes, and teachers of school, college, universities."
+}
