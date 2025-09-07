@@ -1,0 +1,50 @@
+[
+  {
+    "class_number": "216",
+    "name": "Srijana",
+    "department": "Cyber Security",
+    "subject": "Management",
+    "time": "8-45:9-45"
+  },
+  {
+    "class_number": "216",
+    "name": "Jethalal",
+    "department": "Cyber Security",
+    "subject": "Hindi",
+    "time": "9-45:10-45"
+  },
+  {
+    "class_number": "216",
+    "name": "Monita",
+    "department": "Cyber Security",
+    "subject": "Nepali",
+    "time": "10-45:11-45"
+  },
+  {
+    "class_number": "216",
+    "name": "Dev",
+    "department": "Cyber Security",
+    "subject": "Physics",
+    "time": "11-45:12-45"
+  },
+  {
+    "class_number": "216",
+    "name": "Laxman",
+    "department": "Cyber Security",
+    "subject": "Math",
+    "time": "1-45:2-45"
+  },
+  {
+    "class_number": "216",
+    "name": "Durga",
+    "department": "Cyber Security",
+    "subject": "Chemistry",
+    "time": "2-45:3-45"
+  },
+  {
+    "class_number": "216",
+    "name": "Nitesh Kumar",
+    "department": "Cyber Security",
+    "subject": "English"
+  }
+]

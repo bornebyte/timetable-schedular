@@ -1,3 +1,5 @@
+const fs = require("node:fs")
+
 let classes = [
     {
         "name": "011",
@@ -155,19 +157,19 @@ let output = []
 
 const transform = (classes, teachers, timings) => {
 
-    for (let i = 0; i < classes.length; i++) { // classes.length
+    for (let i = 0; i < classes.length; i++) {
         let class_number = classes[i].name
         let class_department = classes[i].department
 
         let available_teachers = []
         let available_times = []
-        
+
         for (let a = 0; a < teachers.length; a++) {
             if (teachers[a].department === class_department) {
                 available_teachers.push(teachers[a])
             }
         }
-        
+
         for (let a = 0; a < timings.length; a++) {
             if (timings[a].department === class_department) {
                 available_times = timings[a].times
@@ -175,10 +177,6 @@ const transform = (classes, teachers, timings) => {
         }
 
         available_teachers = shuffle_teachers(available_teachers)
-
-        // console.log(class_number,class_department)
-        // console.log(available_teachers)
-        // console.log(available_teachers[1].name)
 
         for (let a = 0; a < available_teachers.length; a++) {
             output.push({
@@ -194,3 +192,19 @@ const transform = (classes, teachers, timings) => {
 
 transform(classes, teachers, timings)
 console.table(output)
+
+// Group by department
+function groupByDepartment(data) {
+    return data.reduce((acc, row) => {
+        const dept = row.department;
+        if (!acc[dept]) acc[dept] = [];
+        acc[dept].push(row);
+        return acc;
+    }, {});
+}
+
+const grouped = groupByDepartment(output);
+
+for (const dept in grouped) {
+    fs.writeFileSync(`routines/${dept.replace(/\s+/g, "_")}.json`, JSON.stringify(grouped[dept], null, 2));
+}
